@@ -1,190 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>hanakeeb</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio</title>
+  
   <style>
-  h1 {
-      border: 5px solid black;
-      height: 50px;
-      width: 200px;
-      border-radius: 20%;
-      font-size: larger;
-      background-color: blanchedalmond;
-      text-align: center;
-      margin: 1rem auto;
-      
-    }
-   
-      
-    
-    
-
-    p {
-      font-size: large;
-      font-weight: bold;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      color:black;
-    }
-
     body {
-      background-color: bisque;
-      padding: 10px;
-    animation-name: Lala;
-      animation-iteration-count: infinite;
-      animation-duration: 5s;
-      
-      
-    }
-    @keyframes Lala {
-      0% {
-        background-color:beige;
-      }
-    50% {
-      background-color: brown;
-    }
-    100% {
-      background-color: beige;
-    }
-  }
-
-    img {
-      border-radius: 50%;
-      position: absolute;
-      right: 10%;
-      top: 10%;
-      box-shadow: 11px 12px 5px rgb(158, 170, 158);
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0 2%;
       max-width: 100%;
-      height: auto;
-      animation-name: Hajar;
-      animation-timing-function: ease-in-out;
-      animation-duration: 5s;
-      animation-iteration-count: infinite;
-     
-    
+      font-family: Arial, sans-serif;
+      background: 
+        radial-gradient(circle at top left, rgba(0, 0, 0, 0.619), transparent 70%),
+        radial-gradient(circle at top right, rgba(120, 6, 6, 0.5), transparent 70%),
+        rgb(28, 26, 26);
+      padding-top: 100px; /* prevents content from hiding under nav */
     }
-    @keyframes Hajar {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(0.5);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-    
 
     h2 {
-      border: 5px solid black;
-      height: 50px;
-      width: 200px;
-      border-radius: 20%;
+      color: rgb(252, 252, 253);
+      font-weight: 200;
+      font-size: xx-large;
+      box-sizing: border-box;
+      margin-bottom: 0.5em;
+    }
+
+    /* FadeIn + visibility keyframes */
+    @keyframes fadeInVisible {
+      0% {
+        opacity: 0;
+        visibility: hidden;
+      }
+      99% {
+        opacity: 0.99;
+        visibility: visible;
+      }
+      100% {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    #layla {
+      border: 5px solid blue;
+      border-top: 5px solid red;
+      border-bottom: 5px solid red;
+      border-radius: 25%;
+      width: 300px;
+      max-width: 90vw;
+      height: auto;
+      display: block;
+      margin: 5% auto 0; /* centers horizontally with vertical spacing */
+      box-sizing: border-box;
+
+      opacity: 0;
+      visibility: hidden;
+      animation: fadeInVisible 3s ease 1s forwards;
+    }
+
+    #Tay {
+      color: blue;
       font-size: larger;
-      background-color: rgb(248, 244, 190);
+      max-width: 600px;
+      width: 90vw;
+      margin: 3% auto 0; /* centers horizontally */
+      text-align: center; /* center text inside */
+      box-sizing: border-box;
+
+      opacity: 0;
+      visibility: hidden;
+      animation:
+        fadeInVisible 1s ease 4s forwards,
+        HI 7s ease 0s infinite;
+    }
+
+    #Lay:hover, #Tay:hover {
+      text-decoration: wavy;
+    }
+
+    section {
+      width: 100%;
+      margin-top: 10%;
+      min-height: 350px;
+      background-color: rgba(255, 0, 0, 0.639);
       text-align: center;
-      margin: 1rem auto;
-      
-      
-      
+      box-sizing: border-box;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 1em 0;
+
+      opacity: 0;
+      visibility: hidden;
+      animation:
+        fadeInVisible 1s ease 3s forwards,
+        Yes 5s ease 3s infinite;
+    }
+
+    img {
+      transition: transform 0.6s ease;
+      transform-style: preserve-3d; /* for smooth 3D effect */
+      backface-visibility: visible;
+      transition-duration: 3s;
+    }
+
+    img:hover {
+      transform: rotateX(350deg);
+    }
+
+    @keyframes Yes {
+      0% {
+        background-color: rgba(165, 42, 42, 0.393);
+      }
+      50% {
+        background-color: rgba(0, 0, 255, 0.299);
+      }
+      100% {
+        background-color: rgba(165, 42, 42, 0.489);
+      }
+    }
+
+    #May, #Hey, #So {
+      height: auto;
+      max-height: 220px;
+      width: 20%;
+      border: 5px solid blue;
+      display: inline-block;
+      box-sizing: border-box;
+      vertical-align: top;
+      margin-right: 1%;
+      margin-left: 0;
+      border-radius: 15% 0% 15% 0%;
+    }
+
+    #No {
+      border-color: rgba(0, 0, 255, 0.9);
+      margin-left: 1%;
+      height: auto;
+      max-height: 219px;
+      width: 22%;
+      border: 5px solid blue;
+      display: inline-block;
+      box-sizing: border-box;
+      vertical-align: top;
+      margin-right: 1%;
+      margin-left: 0;
+      border-radius: 15% 0% 15% 0%;
+    }
+
+    @keyframes HI {
+      0% {
+        color: hsl(0, 100%, 50%);
+      }
+      50% {
+        color: rgb(0, 0, 255);
+      }
+      100% {
+        color: rgb(255, 0, 0);
+      }
+    }
+
+    #Summation {
+      color: white;
+      font-size: xx-large;
+      margin-top: 20%;
+      display: flex;
+    }
+
+    #Haj {
+      color: white;
+      font-size: x-large;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    #now {
+      font-size: small;
+    }
+
+    #Go, #Stop, #Third {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 1%;
+      border: 5px solid rgb(11, 10, 10);
+    }
+
+    #Contact {
+      font-size: xx-large;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .contact-item {
+      display: inline-block;
+      margin: 0 30px;
+      font-size: large;
+      vertical-align: top;
+      line-height: 1.4;
+    }
+
+    .emoji {
+      display: block;
+      font-size: 80px;  /* HUGE emoji */
+      margin-top: 15px;
+      user-select: none;
+    }
+
+    /* Navigation styles */
+   nav#top-nav {
+  position: absolute;  /* same as original */
+  top: 20px;           /* keeps distance from top */
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 999;
+}
+
+nav#top-nav a {
+  color: white;
+  font-size: x-large;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+nav#top-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Add padding to body so nav doesn't overlap content */
+body {
+  padding-top: 80px;  /* adjust as needed depending on nav height */
+}
+footer{
+  margin-right: 60%;
+  font-size: medium;
+  color: aliceblue;
+}
+@media screen and (min-width: 1440px) {
+  #Tay {
+    font-size: 2rem; /* much bigger text */
   }
 
-    a:hover {
-      color: rgba(102, 0, 255, 0.776);
-      font-size:x-large;
-      
-    }
-    
-    
-   
-    
+  #layla {
+    width: 60%;       /* very large but still responsive */
+    max-width: 1000px; /* limit max size */
+    height: auto;      /* maintain proportions */
+  }
+  
 
-    h3 {
-      font-size: large;
-      border: 5px solid black;
-      height: 50px;
-      width: 200px;
-      border-radius: 20%;
-      background-color: rgb(248, 244, 190);
-      text-align: center;
-      margin: 1rem auto;
-      animation-name: snakeMove;
-      animation-duration: 2s;
-     
-    }
-
-    h4 {
-      font-size: larger;
-      
-    }
-
-    input[type="text"]:hover {
-      color: blue;
-      border-width: 30%;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      h1, h2, h3 {
-        width: 80%;
-        height: auto;
-        font-size: medium;
-      }
-
-      img {
-        position: relative;
-        display: block;
-        margin: 1rem auto;
-        right: 0;
-        top: 0;
-      }
-      p {
-        font-size: medium;
-
-        
-      }
-    }
-    img:hover {
-      transform:translate(-25px,-5px )scale(1.5);
-      
-
-
-    }
-   
-    
-
+}
   </style>
 </head>
-
 <body>
-  
-  <h1>My personal Portfolio</h1>
-  <div>
-  <p>I am an experienced programmar.<br>
-    I have the ability to design User-Interface<br>
-    Take a look at my past practice projects.<br>
-  </p>
-  </div>
-  <br>
-  <img src="https://pics.craiyon.com/2023-10-21/5e1f5928f2e5421bac8d4a350fdaee31.webp" alt="image" height="300px" width="200px">
 
-  <h2>My Examples</h2>
-  <a href="https://1drv.ms/u/c/692c9328f6293af2/EdwalKHb2RtMjrXiKsmb97gBzbwqJ2Dey2VcEoqG9QKqrg?e=N22JLp" target="_blank">Example one</a><br><br>
-  <a href="https://1drv.ms/u/c/692c9328f6293af2/EWluGi6agR9KuPfQlv5HxKQBcZEkWUaz_OOGTOcORX64fA?e=MFBsG6" target="_blank">Example two</a><br><br>
-  <a href="https://1drv.ms/u/c/692c9328f6293af2/EbPNQ-ELu-dEpIpuBHtBI-UB7ISYbN6pWkLWc6LWiCC8_A?e=5fypgj" target="_blank">Example three</a><br>
+<nav id="top-nav">
+  <a href="index.html">Home</a>
+  <a href="design.html">Design</a>
+  <a id="maymay" href="about.html">About</a>
+</nav>
 
-  <h3>Reflect</h3>
-  <p>Now that you have viewed my examples, there is completly more that I can do,
-    the ones above are just examples.
-    I am pretty much good with the styling more than everything
+  <img id="layla" src="https://images.rawpixel.com/image_social_landscape/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAzL3Jhd3BpeGVsb2ZmaWNlMjFfYV9taW5pbWFsX2FuZF9sZXNzX2RldGFpbF9pbGx1c3RyYXRpb25fb2ZfdGhlX18wZGNhYzJhYi0zNmY3LTQyMTUtOTg1OS0yNmQwZGM2OGQ5MTMuanBn.jpg" alt="Computer image" />
+  <br /><br />
+
+  <p id="Tay">
+            Crafting websites that engage, inspire, and convert.
+
   </p>
-<footer>
-  <h4>Contact Information </h4>
+
+  <section>
+    <h2>Education</h2>
+    <img id="May" src="https://api2.sololearn.com/v2/certificates/CC-DHKW5QEF/image/jpg?t=638804545421202390" alt="certificate" />
+    <img id="Hey" src="https://api2.sololearn.com/v2/certificates/CC-WNE6PEXA/image/jpg?t=638807050695899860" alt="Cert-image" />
+    <img id="So" src="https://api2.sololearn.com/v2/certificates/CC-FNFL3IYP/image/jpg?t=638849630209762240" alt="Photooo" />
+    <img id="No" src="https://i.postimg.cc/65FsjMGj/Screenshot-2-8-2025-42154.jpg" alt="Photo3" />
+  </section>
+
+  <section id="Haj">
+    <h3>My journey🎓</h3>
+    <p id="now">
+     <p>
+    Studied Computer Information Systems at Wayne County Community College District (2023–2025).<br>
+    <br>
+    Supplemented my education with online courses from platforms like SoloLearn and UCertify
+    <br>
+    
+    to enhance my web development and coding expertise.
+</p>
+    </p>
+    
+    <img id="Go" src="https://www.detroitchamber.com/wp-content/uploads/2022/09/WCCCD-logo_wide.jpg" alt="College picture" height="250px" width="300px" />
+    <img id="Stop" src="https://logowik.com/content/uploads/images/sololearn8062.jpg" alt="College picture" height="250px" width="300px" />
+    <img id="Third" src="https://www.ucertify.com/layout/themes/bootstrap4/ux/images/webpage/homepage/all-courses-og.png" alt="uCertify promo" height="250px" width="300px" />
+  </section>
+
+  <section id="Contact">
+    <h4>Contact Information</h4>
+
+    <h3 class="contact-item">
+      Email: ahnakeeb@gmail.com<br />
+      <span class="emoji">📧</span>
+    </h3>
+
+    <h3 class="contact-item">
+      Phone#: (313) 281-1292<br />
+      <span class="emoji">📞</span>
+    </h3>
+
+    <h3 class="contact-item">
+      Note: Usually answer within 24 hrs.<br />
+      <span class="emoji">📝</span>
+    </h3>
+  </section>
   <br>
-  <p>📱Phone number: 313-281-1292<br><br>
-    📧 Email: ahnanakeeb@gmail.com</p>
+  <br>
+  <footer>
+  <p>© 2025 Anakeebh. All rights reserved.</p>
 </footer>
+  <br>
 </body>
 </html>
