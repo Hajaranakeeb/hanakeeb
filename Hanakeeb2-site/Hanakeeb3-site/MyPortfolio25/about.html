@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            background-color: black;
+            padding-top: 70px;
+            color: rgb(100, 100, 228);
+            font-family: Arial, sans-serif;
+        }
+
+        h1, p {
+            text-align: center;
+            font-size: xx-large;
+        }
+
+        nav#top-nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 999;
+        }
+
+        nav#top-nav a {
+            color: white;
+            font-size: x-large;
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 15px;
+            border-radius: 10px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        nav#top-nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        #lay, #may, #Kite {
+            animation: Lala 3s ease 1s forwards;
+            visibility: hidden;
+        }
+
+        @keyframes Lala {
+            0% { opacity: 0; visibility: hidden; }
+            99% { opacity: 0.99; visibility: visible; }
+            100% { opacity: 1; visibility: visible; }
+        }
+        @media screen and (min-width: 1440px) {
+  p#lay,
+  p#may,
+  p#Kite {
+   margin-top: 13rem; 
+  }
+}
+    </style>
+</head>
+<body>
+    <nav id="top-nav">
+        <a id="home" onclick="HI()" href="index.html">Home</a>
+        <a href="design.html">Design</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <h1>About This Website</h1>
+    <br>
+    <br>
+    <br>
+
+    <p id="lay">
+        This website is focused on creating visually appealing, responsive, and user-friendly online experiences. Its goal is to help businesses present their services effectively.
+    </p>
+    <br><br><br>
+
+    <p id="may">
+        The website combines thoughtful design with functional development to engage users and achieve business objectives. It is continually updated to incorporate modern frameworks and techniques.
+    </p>
+    <br><br>
+
+    <p id="Kite">
+        The website’s goals are to turn ideas into seamless online experiences, delivering pages that are visually engaging, optimized for performance, and impactful for businesses.
+    </p>
+</body>
+</html>

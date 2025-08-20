@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asthetic log-in page</title>
+  <style>
+  input[name="Email"] {
+    background-color: dodgerblue;
+    position: absolute;
+    top: 35%;
+    left: 43%;
+    width: 200px;
+    color: white;
+    padding: 5px;
+     border:solid black;
+  }
+
+  input[name="Username"] {
+   background-color: dodgerblue;
+    position: absolute;
+    top: 25%;
+    left: 43%;
+    width: 200px;
+    color: white;
+    padding: 5px;
+    border:solid black;
+  }
+ input[type="submit"] {
+  background-color: dodgerblue;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  position: absolute;
+  top: 45%;
+  left: 47%;
+  cursor: pointer;
+  border:solid black;
+}
+
+  label[for="Username"] {
+    position: absolute;
+    top: 35%;
+    left: 37%;
+    font-weight: bold;
+  }
+
+  label[for="Email"] {
+    position: absolute;
+    top: 25%;
+    left: 36%;
+    font-weight: bold;
+  }
+  form {
+    border: 5px solid black;
+    width: 470px;
+    height:350px;
+    padding: 20px;
+    margin: 100px auto;
+    background-color: #387284;
+    box-sizing: border-box;
+   resize: both;
+    
+  }
+  body {
+    animation-name: Layla;
+    animation-duration: 3s;
+          
+    animation-iteration-count: infinite;
+    background-image: url('https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?cs=srgb&dl=daylight-environment-forest-459225.jpg&fm=jpg');
+  
+  }
+  
+  @keyframes Layla {
+    0% {
+      background-color: rgb(76, 107, 138);
+    }
+   50% {
+    background-color: rgb(58, 77, 97);
+   }
+   100% {
+    background-color: rgb(74, 74, 143);
+   }
+  }
+  form:hover{
+    background-color: aqua;
+    animation-name: Lex;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    
+
+  }
+  @keyframes Lex {
+    0% {
+      background-color: rgb(19, 130, 186);
+    }
+   50% {
+    background-color: rgb(24, 42, 140);
+   }
+   100% {
+    background-color: rgb(32, 143, 153);
+   }
+  }
+
+  li ol {
+    color: rgb(92, 16, 16);
+    text-overflow: clip;
+  }
+ 
+
+</style>
+
+<form onsubmit="handleSubmit(); return false;">
+  <label for="Username">Email:📨</label>
+  <input type="text" name="Username" id="Username">
+
+  <label for="Email">Username:👤</label>
+  <input type="email" name="Email" id="Email">
+
+  <input type="submit" value="Submit" >
+</form>
+
+
+
+
+<script>
+  function handleSubmit() {
+    alert('submission successfull!')
+    
+  }
+</script>
+
+
+
+</body>
+</html>
