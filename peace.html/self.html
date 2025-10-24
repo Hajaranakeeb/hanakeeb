@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Self</title>
+<style>
+    body{
+        background-color: rgba(245, 196, 72, 0.651);
+        font-family: sans-serif;
+        position: relative; /* for button positioning */
+        border:12px solid white;
+        height:114vh
+    }
+    #self, h2, h1{
+        color: aliceblue;
+        -webkit-text-stroke: black 2px;
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+    p{
+        color: aliceblue;
+        -webkit-text-stroke: black 0.6px;
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+    #Motivation{
+        -webkit-text-stroke: black 1.5px;
+        text-align: right;
+    }
+    #Motivation1{
+        -webkit-text-stroke: black 0.7px;
+        text-align: right;
+    }
+    #Consistency{
+        text-align: center;
+        -webkit-text-stroke: black 1.7px;
+    }
+    #Consistency1{
+        text-align: center;
+        -webkit-text-stroke: black 0.7px;
+    }
+    #care{
+        text-align: end;
+        -webkit-text-stroke: black 1.7px;
+    }
+    #care1{
+        text-align: end;
+        -webkit-text-stroke: black 0.7px;
+    }
+    #love{
+        margin-bottom: -4%;
+        -webkit-text-stroke: black 1.7px;
+    }
+    #love1{
+        -webkit-text-stroke: black 0.7px;
+        margin-top:5%
+    }
+
+    /* flower button top right */
+    #flowerBtn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 2rem;
+        box-sizing: border-box;
+       z-index: 1000;
+       border: none;
+       background:none;
+       cursor: pointer;
+    }
+     nav#top-nav a {
+  color: white;
+  font-size: x-large;
+  text-decoration: none;
+ 
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  
+}
+nav#top-nav {
+  position: absolute;  /* same as original */
+  top: 20px;           /* keeps distance from top */
+  right: 120px;
+  display: flex;
+  gap: 10px;
+  z-index: 999;
+}
+
+#self1,#Motivation1,#Consistency1,#care1,#love1{
+    border:5px solid pink;
+    background-color: aliceblue;
+    
+}
+</style>
+</head>
+<body>
+
+<h1 id="self">Self</h1>
+<p id="self1">"You are worthy of kindness and respect, starting with yourself.<br>Take time to listen to your inner voice; it knows what you need.<br>Self-love grows when you accept your flaws and celebrate your strengths".</p>
+
+<h2 id="Motivation">Motivation</h2>
+<p id="Motivation1">Every small step forward is progress worth celebrating.<br>Focus on what you can control and release what you cannot.<br>Push yourself gently, and trust the process of growth.</p>
+
+<h1 id="Consistency">Consistency</h1>
+<p id="Consistency1">Habits shape your future; consistency turns effort into results.<br>Small daily actions, repeated, create lasting change.<br>Stay patient and persistent; your efforts compound over time.</p>
+
+<h1 id="care">Care</h1>
+<p id="care1">Care for yourself the way you would care for someone you love.<br>Small acts of care create big changes over time.<br>True care is gentle, patient, and steady.</p>
+
+<h1 id="love">Love</h1>
+<p id="love1">When you truly love yourself, you set the tone for your life.<br>You attract positivity, create healthy boundaries, and face challenges<br>with confidence, knowing that you are enough just as you are.</p>
+
+<!-- Flower button -->
+<button id="flowerBtn" onclick="nextQuotes()">🌸</button>
+
+<nav id="top-nav">🤍
+  <a id="maymay" href="calm.html">calm</a>
+  <a href="self.html">self</a>
+  <a href="relax.html">relax</a>🤍
+</nav>
+
+
+
+<script>
+const selfQuotes = [
+'"You are worthy of kindness and respect, starting with yourself.<br>Take time to listen to your inner voice; it knows what you need.<br>Self-love grows when you accept your flaws and celebrate your strengths."',
+'"Treat yourself with compassion and patience.<br>Your growth matters as much as anyone else\'s.<br>Cherish your journey and your unique story."',
+'"Your value is inherent; honor your needs, forgive your mistakes,<br>and celebrate even small victories along the way."'
+];
+
+const motivationQuotes = [
+'Every small step forward is progress worth celebrating.<br>Focus on what you can control and release what you cannot.<br>Push yourself gently, and trust the process of growth.',
+'Believe in your efforts and keep moving forward.<br>Obstacles are temporary; your persistence is permanent.<br>Celebrate every tiny achievement along the way.',
+'Stay determined, even when progress feels slow.<br>Your consistent effort builds strength and resilience.<br>Keep your eyes on the possibilities, not the setbacks.'
+];
+
+const consistencyQuotes = [
+'Habits shape your future; consistency turns effort into results.<br>Small daily actions, repeated, create lasting change.<br>Stay patient and persistent; your efforts compound over time.',
+'Daily commitment, even in tiny doses, creates transformation.<br>Consistency beats intensity when done with patience.<br>Trust the process and keep moving forward.',
+'Persistence in small tasks leads to extraordinary outcomes.<br>The secret of success is showing up every day.<br>Your steady effort is shaping your future.'
+];
+
+const careQuotes = [
+'Care for yourself the way you would care for someone you love.<br>Small acts of care create big changes over time.<br>True care is gentle, patient, and steady.',
+'Listen to your body and mind; they tell you what you need.<br>Nourish yourself with kindness and understanding.<br>Self-care is not selfish; it is essential.',
+'Treat your well-being as a priority.<br>Small gestures of care accumulate into great strength.<br>Be patient with yourself during difficult times.'
+];
+
+const loveQuotes = [
+'When you truly love yourself, you set the tone for your life.<br>You attract positivity, create healthy boundaries, and face challenges<br>with confidence, knowing that you are enough just as you are.',
+'Self-love is the foundation for all other relationships.<br>Honor your needs, cherish your worth,<br>and embrace your uniqueness every day.',
+'Loving yourself empowers you to navigate life with courage.<br>Celebrate your victories, forgive your mistakes,<br>and shine in your own light.'
+];
+
+let quoteIndex = 0;       // tracks which quote to show
+let bgIndex = 1;          // tracks background color
+let bgColors = ["#F5F5DC", "#00BFFF", "#FF69B4", "#F5F5DC"]; 
+let colorIndex = 0;  
+
+
+function nextQuotes() {
+    // Cycle quotes (3 quotes)
+    quoteIndex = (quoteIndex + 1) % 3;
+    document.getElementById("self1").innerHTML = selfQuotes[quoteIndex];
+    document.getElementById("Motivation1").innerHTML = motivationQuotes[quoteIndex];
+    document.getElementById("Consistency1").innerHTML = consistencyQuotes[quoteIndex];
+    document.getElementById("care1").innerHTML = careQuotes[quoteIndex];
+    document.getElementById("love1").innerHTML = loveQuotes[quoteIndex];
+
+    // Change color of love1
+   
+   
+    // Cycle background color independently
+    bgIndex = (bgIndex + 1) % bgColors.length;
+    document.body.style.backgroundColor = bgColors[bgIndex];
+    let paragraphs = document.querySelectorAll("p");
+
+    if (colorIndex === 0) {
+        paragraphs.forEach(p => p.style.color = "white");
+    } else if (colorIndex === 1) {
+        paragraphs.forEach(p => p.style.color = "black");
+    } else if (colorIndex === 2) {
+        paragraphs.forEach(p => p.style.color = "white");
+    } else {
+        paragraphs.forEach(p => p.style.color = "");
+        colorIndex = -1; // reset to original
+    }
+
+    colorIndex++;
+    
+}
+    
+
+
+</script>
+
+</body>
+</html>

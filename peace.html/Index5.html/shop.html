@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<style>
+    body{
+        background-color: rgb(69, 39, 69);
+        margin: 0;
+        padding: 0;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    /* NAV FIX */
+    nav {
+        background-color: rgba(0,0,0,0.3);
+        padding: 10px 0;
+        text-align: center;
+    }
+    nav a {
+        color: aliceblue;
+        text-decoration: none;
+        margin: 0 20px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    nav a:hover {
+        color: rgb(237, 73, 188);
+    }
+
+   h2 {
+        position: absolute;
+        right: 45%;
+        color: aliceblue;
+        font-size: 25px;
+        animation: Rocky 1s ease-in-out infinite;
+        max-width: 100%;   /* prevents it from overflowing on small screens */
+        min-width: 200px;  /* keeps its shape so it won’t jump around */
+        text-align: center;
+        transform-origin: center;
+    }
+
+    @keyframes Rocky{
+        0%{
+            color: red;
+            transform:scale(1);
+        }
+        50%{
+            color: yellow;
+            transform: scale(1.2);
+        }
+        100%{
+            color:rgb(77, 176, 77);
+            transform:scale(1);
+        }
+    }
+
+    #lol{
+        border-radius: 50%;
+        margin-left:4%;
+        margin-top: 10%;
+        border:10px solid rgb(143, 97, 126);
+        box-shadow: 0 4px 40px rgb(190, 159, 185);
+    }
+    #haha{
+        border-radius: 50%;
+        margin-left:5%;
+        margin-top: 10%;
+        border:10px solid rgb(80, 80, 134);
+        box-shadow: 0 4px 40px rgb(223, 207, 220);
+    }
+    #no{
+        border-radius: 50%;
+        margin-left:3%;
+        margin-top: 10%;
+        border:10px solid rgb(112, 128, 163);
+        box-shadow: 0 4px 40px rgb(216, 203, 214);
+    }
+    #lol2 {
+        border-radius: 50%;
+        margin-left: 4%;
+        margin-top: 10%;
+        border: 10px solid rgb(143, 97, 126); 
+        box-shadow: 0 4px 40px rgb(190, 159, 185);
+        background-color: white;
+    }
+    #haha2 {
+        border-radius: 50%;
+        margin-left: 5%;
+        margin-top: 10%;
+        border: 10px solid rgb(80, 80, 134); 
+        box-shadow: 0 4px 40px rgb(223, 207, 220);
+        background-color: white;
+    }
+    #no2 {
+        border-radius: 50%;
+        margin-left: 3%;
+        margin-top: 10%;
+        border: 10px solid rgb(112, 128, 163); 
+        box-shadow: 0 4px 40px rgb(216, 203, 214);
+        background-color: white;
+    }
+</style>
+<body>
+  <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About Us</a>
+  </nav>
+
+  <h2> Flash Sale! <br> 20% off<br> </h2>
+
+  <div style="display:inline-block; margin-left:4%; margin-top:10%; text-align:center;">
+    <img id="lol" src="https://cdn.pixabay.com/photo/2017/08/06/13/00/people-2592310_1280.jpg" width="310" height="310">
+    <div style="color: antiquewhite;"  class="price"><s>$12.99</s><br>$10.99</div>
+</div>
+
+<div style="display:inline-block; margin-left:5%; margin-top:10%; text-align:center;">
+    <img id="haha" src="https://media.istockphoto.com/id/689343986/vector/trendy-woman-long-hairs-red-copper-colors-beauty-fashion-realistic-3d.jpg?s=1024x1024&w=is&k=20&c=VUw7UyJCsFSrvQz_W88Iduf9pIim-LZWN2a5YQLIIc0=" width="310" height="310">
+    <div style="color: antiquewhite;" class="price"><s>$10.99</s><br>$8.00</div>
+</div>
+
+<div style="display:inline-block; margin-left:3%; margin-top:10%; text-align:center;">
+    <img id="no" src="https://media.istockphoto.com/id/1260874712/photo/purple-anime-style-wig-on-white.jpg?s=1024x1024&w=is&k=20&c=9yGL0ftHNdOe2cG8v4GheWntkufEVCV8NqXLpoyUeFY=" width="310" height="310">
+    <div style="color: antiquewhite;" class="price"><s>$30.00</s><br>$25.00</div>
+</div>
+
+<div style="display:inline-block; margin-left:4%; margin-top:10%; text-align:center;">
+    <img id="lol2" src="https://static.vecteezy.com/system/resources/thumbnails/044/783/242/small_2x/stylish-lady-hair-wig-with-trendy-design-isolated-on-transparent-background-png.png" width="310" height="310">
+    <div style="color: antiquewhite;" class="price"><s>$14.99</s><br>$12.99</div>
+</div>
+
+<div style="display:inline-block; margin-left:5%; margin-top:10%; text-align:center;">
+    <img id="haha2" src="https://static.vecteezy.com/system/resources/thumbnails/049/951/079/small_2x/vibrant-copper-long-wavy-hair-cut-out-transparent-png.png" width="310" height="310">
+    <div style="color: antiquewhite;" class="price"><s>$16.99</s><br>$14.99</div>
+</div>
+
+<div style="display:inline-block; margin-left:3%; margin-top:10%; text-align:center;">
+    <img id="no2" src="https://static.vecteezy.com/system/resources/thumbnails/051/689/130/small_2x/modern-stylish-women-straight-hair-wig-fashionable-hairstyle-isolate-on-transparency-background-png.png" width="310" height="310">
+    <div style="color: antiquewhite;" class="price"><s>$20.00</s><br>$18.00</div>
+</div>
+
+<br>
+<br>
+<br>
+</body>
+</html>

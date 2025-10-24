@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PEACE</title>
+<style>
+    body {
+        background: linear-gradient(to right, rgba(176, 99, 172, 0.884) 50%, rgb(160, 92, 160) 50%);
+        font-family: 'Quicksand', sans-serif;
+        margin: 0;
+        padding: 0;
+        position: relative; /* needed for absolute positioning of #peace */
+        height: 100vh;      /* full viewport height */
+        border: 20px solid pink;
+         height: 94vh;  
+    }
+
+    #Stress {
+        font-size: 250%;
+        margin-left: 12%;
+        margin-top: 50px;
+        box-sizing: border-box;
+        max-width: 100%;
+        -webkit-text-stroke: 1px rgb(221, 178, 180);
+        color: hotpink;
+        text-shadow: 0 5px #fff;
+        line-height: 1.6;
+        display: inline-block;
+    }
+
+    #peace {
+        font-family: fantasy;
+        font-size: 3rem;
+        -webkit-text-stroke: 1px white;
+        color: hotpink;
+        text-shadow: 0 5px #fff;
+        position: absolute;      /* independent of #Stress */
+        bottom: 170px;            /* distance from bottom of page */
+        left: 80%;               /* center horizontally */
+        transform: translateX(-50%); /* perfect horizontal centering */
+        max-width: 100%;
+    }
+    nav#top-nav a {
+  color: white;
+  font-size: x-large;
+  text-decoration: none;
+ 
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+nav#top-nav {
+  position: absolute;  /* same as original */
+  top: 20px;           /* keeps distance from top */
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 999;
+}
+
+    
+    
+</style>
+</head>
+<body>
+
+    <p id="Stress">
+        "You are worthy<br><br>
+        you are loved<br><br>
+        you are enough"
+    </p>
+
+    <h1 id="peace">
+            <a href="self.html" style="text-decoration: none; color: inherit;">🌸</a><br>
+
+        Peace Within</h1>
+   
+
+    <nav id="top-nav">
+  <nav id="top-nav">🤍
+  <a id="maymay" href="calm.html">calm</a>
+  <a href="self.html">self</a>
+  <a href="relax.html">relax</a>🤍
+</nav>
+</body>
+</html>
